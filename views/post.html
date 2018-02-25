@@ -1,6 +1,49 @@
 <div style="width: 100%; height: 100%;" data-simplebar>
 	<div style="width: 80%; height: auto; margin: auto;">
-		{{post.title}}
-		{{post.content}}
+		<!-- {{post}} -->
+		<div ng-class="post.category | lowercase" class="box" style="width: 40px; height: 40px; margin-top: 50px; margin-right: 20px; border-radius: 5px; float: left; margin-bottom: 20px;">
+			
+		</div>
+		<div style="width: calc(100% - 60px); height: 40px; font-size: 1.7rem; font-weight: bold; padding-top: 50px; margin-bottom: 20px; color: #444;">
+			{{post.title | uppercase}}
+		</div>
+		<div ng-class="post.category | lowercase" class="openbox" style="width: 38px; height: 38px; margin-top: 10px; margin-right: 20px; border-radius: 5px; float: left; margin-bottom: 20px; position: relative;">
+			<i class="fa fa-user center_item" style="font-size: 1.3rem;"></i>
+		</div>
+		<div style="width: auto; height: 32px; font-size: 1rem; font-weight: bold; margin-top: 10px; margin-bottom: 20px; color: #444; float: left; position: relative; padding-right: 50px; padding-top: 8px;">
+			{{post.name}}
+		</div>
+		<div ng-class="post.category | lowercase" class="openbox" style="width: 38px; height: 38px; margin-top: 10px; margin-right: 20px; border-radius: 5px; float: left; margin-bottom: 20px; position: relative;">
+			<i class="fa fa-tag center_item" style="font-size: 1.3rem;"></i>
+		</div>
+		<div style="width: auto; height: 32px; font-size: 1rem; font-weight: bold; margin-top: 10px; margin-bottom: 20px; color: #444; float: left; position: relative; padding-right: 50px; padding-top: 8px;">
+			{{post.category}}
+		</div>
+		<div ng-class="post.category | lowercase" class="openbox" style="width: 38px; height: 38px; margin-top: 10px; margin-right: 20px; border-radius: 5px; float: left; margin-bottom: 20px; position: relative;">
+			<i class="fa fa-comments center_item" style="font-size: 1.3rem;"></i>
+		</div>
+		<div style="width: 150px; height: 40px; font-size: 1rem; font-weight: bold; margin-top: 10px; margin-bottom: 20px; color: #444; float: left; position: relative;">
+			<span class="center_item_vertically">0 comments</span>
+		</div>
+		<div style="width: calc(100% - 100px); min-height: 25px; padding: 50px; background: #EEE; border-radius: 10px; font-size: 1.1rem; float: left; margin-bottom: 30px;">
+			{{post.content}}
+		</div>
+		<div ng-class="post.category | lowercase" class="openbox" style="width: 38px; height: 38px; border-radius: 40px; font-size: 1.1rem; float: left; position: relative; margin-right: 20px;">
+			<i class="fa fa-comments center_item" style="font-size: 1.3rem;"></i>
+		</div>
+		<div style="width: calc(100% - 60px); height: auto; float: left;">
+			<div ng-class="post.category | lowercase" class="color" style="width: 100%; height: 40px; font-size: 1.1rem; position: relative;">
+				<span class="center_item_vertically" style="font-weight: 600;">COMMENTS</span>
+			</div>
+			<div style="width: calc(100% - 100px); height: 70px; background: #FFF; border: 1px solid #EEE; border-radius: 10px; margin-bottom: 10px; overflow: hidden;">
+				<textarea ng-model="comment.text" style="width: calc(100% - 40px); height: calc(100% - 40px); width: 100%; border: none; outline: none; padding: 0; resize: none; padding: 20px; font-family: inherit;" placeholder="Type a comment here ..."></textarea>
+			</div>
+			<div style="width: calc(100% - 100px); min-height: 45px; background: #EEE; border-radius: 10px; margin-bottom: 10px;">
+				
+			</div>
+			<div style="width: calc(100% - 100px); min-height: 45px; background: #EEE; border-radius: 10px; margin-bottom: 10px;">
+				
+			</div>
+		</div>
 	</div>
 </div>

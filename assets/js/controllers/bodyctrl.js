@@ -172,4 +172,8 @@ app.controller('bodyCtrl', function($rootScope, $scope, $http, $state, $interval
     	$scope.creatingPost = true;
     	$scope.editingPost = post.id;
     }
+
+    $scope.home = function(){
+    	$state.go('home');
+    }
 });

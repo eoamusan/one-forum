@@ -432,6 +432,42 @@ html, body{
 	background: #F27C21;
 	color: #FFF !important;
 }
+.entertainment.box{
+	background: #D61A47;
+}
+.entertainment.openbox{
+	border: 1px solid #D61A47;
+}
+.entertainment.openbox i, .entertainment.color{
+	color: #D61A47;
+}
+.sports.box{
+	background: #D68B1A;
+}
+.sports.openbox{
+	border: 1px solid #D68B1A;
+}
+.sports.openbox i, .sports.color{
+	color: #D68B1A;
+}
+.news.box{
+	background: #00897b;
+}
+.news.openbox{
+	border: 1px solid #00897b;
+}
+.news.openbox i, .news.color{
+	color: #00897b;
+}
+.business.box{
+	background: #F27C21;
+}
+.business.openbox{
+	border: 1px solid #F27C21;
+}
+.business.openbox i, .business.color{
+	color: #F27C21;
+}
 
 .of_closebtn{
 	width: 50px;
