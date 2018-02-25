@@ -15,49 +15,50 @@
 		<div class="of_tag" ng-class="{'active': tag == 'sports'}" ng-click="setTag('sports');">
 			SPORTS
 		</div>
-		<div class="of_tag" ng-class="{'active': tag == 'history'}" ng-click="setTag('history');">
+		<div class="of_tag" ng-class="{'active': tag == 'business'}" ng-click="setTag('business');">
 			BUSINESS
 		</div>
 	</div>
 	<div style="width: 80%; height: auto; margin: auto;">
-		<div class="of_post entertainment">
+		<div class="of_post noselect" ng-if="(tag == (post.category | lowercase)) || (tag == 'all')" ng-class="post.category | lowercase" ng-repeat="post in posts | reverse  | filter : content_filter">
 			<div class="preview">
-				<span class="text center_item nowrap">"Atr ... ded"</span>
+				<span class="text center_item nowrap">"{{parsePreview(post.content)}}"</span>
 			</div>
 			<div class="post_title text_truncate">
-				This is a test title
+				{{post.title}}
 			</div>
 			<div class="post_desc text_truncate_two">
-				A truncated text to limit things to two lines and see how things pan out and be sure my designs are as intended
+				{{post.content}}
 			</div>
 			<div class="post_meta">
 				<div class="tag-color">
 					
 				</div>
 				<div class="tag-label">
-					Entertainment
+					{{post.category}}
 				</div>
 				<div class="comment-icon">
 					<i class="fa fa-comments center_item"></i>
 				</div>
 				<div class="tag-label">
-					75
+					0
+				</div>
+				<div style="width: 100%; height: auto; float: left; margin-bottom: 10px;">
+					<div class="comment-icon">
+						<i class="fa fa-user center_item" style="font-size: 1.3rem;"></i>
+					</div>
+					<div class="tag-label">
+						{{post.name}}
+					</div>
 				</div>
 			</div>
 			<div class="post_readmore">
-				<button>READ MORE</button>
+				<div ng-if="globals.currentUser.userdata.data[0].id == post.userid" ng-click="delete(post.id)" style="width: 30px; height: 30px; position: relative; float: left; cursor: pointer;">
+					<i class="fa fa-trash" style="width: 30px; height: 25px; position: relative; float: left; text-align: left; padding-top: 5px; font-size: 1.3rem; color: #666;"></i>
+				</div>
+				<button ng-if="globals.currentUser.userdata.data[0].id == post.userid" ng-click="edit(post);">EDIT</button>
+				<button ui-sref="post({postid: post.id})" ng-class="post.category | lowercase">READ MORE</button>
 			</div>
 		</div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
-		<div class="of_post"></div>
 	</div>
 </div>

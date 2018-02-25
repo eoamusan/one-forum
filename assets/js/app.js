@@ -45,6 +45,17 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
             }
         })
 
+        .state('post', {
+            url: '/post/:postid',
+            parent: 'body',
+            views: {
+                'container@body': {
+                    templateUrl : "views/post.html",
+                    controller: 'postCtrl'
+                }
+            }
+        })
+
         .state('logout', {
             url: '/logout',
             parent: 'body',
@@ -82,7 +93,7 @@ app.run(function($rootScope, $state, AuthenticationService, $cookieStore, $locat
     console.log($rootScope.globals);
 
     var routes_nloggedin = ['/login', '/signup/patient', '/signup/doctor'];
-    var routes_loggedin = ['/account', '/account/doctors', '/question', '/password-change'];
+    var routes_loggedin = ['/', '/account/doctors', '/question', '/password-change'];
 
     // if ($rootScope.globals.currentUser) {
     //     var credentials = {
@@ -125,6 +136,8 @@ app.run(function($rootScope, $state, AuthenticationService, $cookieStore, $locat
             $state.go("home");
             event.preventDefault();
         }
+
+        console.log(routes_loggedin.indexOf($location.path()));
 
         if ((routes_loggedin.indexOf($location.path()) !== -1) && !$rootScope.globals.currentUser) {
             // User isn’t authenticated

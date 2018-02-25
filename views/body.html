@@ -5,12 +5,14 @@
 		</div>
 		<div style="width: calc(100% - 200px); height: 100%; float: left;">
 			<div style="width: 250px; padding: 0 30px; cursor: pointer; padding-right: 0; height: calc(100% - 10px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 5px;">
-				<div style="width: 100%; height: 40px; border-radius: 40px; background: #FFF;"></div>
+				<div style="width: 100%; height: 40px; border-radius: 40px; background: #FFF; overflow: hidden;">
+					<input type="text" ng-model="content_filter" style="width: calc(100% - 40px); height: 100%; border: none; outline: none; padding: 0 20px;" placeholder="Filter titles">
+				</div>
 			</div>
 			<div style="width: auto; padding: 0 30px; cursor: pointer; height: calc(100% - 15px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 15px;" ng-click="logout();">
 				LOGOUT
 			</div>
-			<div style="width: auto; padding: 0 30px; cursor: pointer; height: calc(100% - 15px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 15px;">
+			<div style="width: auto; padding: 0 30px; cursor: pointer; height: calc(100% - 15px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 15px;" ng-click="createPost();">
 				CREATE POST
 			</div>
 		</div>
@@ -19,52 +21,65 @@
 <div style="width: 100%; height: calc(100vh - 50px);" ui-view="container">
 	
 </div>
-<div style="width: 100%; height: calc(100vh - 50px); position: absolute; top: 50px; background: rgba(255, 255, 255, 0.7);">
+<div ng-show="creatingPost" style="width: 100%; height: calc(100vh - 50px); position: absolute; top: 50px; background: rgba(255, 255, 255, 0.7);">
 	<div class="relative-container" style="padding-top: 50px; height: calc(100% - 50px);">
-		<div class="of_closebtn">
+		<div class="of_closebtn" ng-click="closeCreatePost();">
 			<i class="pe-7s-close center_item"></i>
 		</div>
-		<div class="of_create">
-			<div class="create_label">
-				Create a post
-			</div>
-			<div class="input-box" data-validate="Title">
-				<div class="label">
-					TITLE <span class="required">*</span>
+		<div class="of_create" data-simplebar>
+			<form id="createPost" ng-submit="sendPost();">
+				<div class="create_label">
+					Create a post
 				</div>
-				<div class="inputcontainer">
-					<input type="text" ng-model="text.title" autocomplete="new-password">
+				<div class="input-box" data-validate="Title">
+					<div class="label">
+						TITLE <span class="required">*</span>
+					</div>
+					<div class="inputcontainer">
+						<input type="text" ng-model="post.title" autocomplete="new-password">
+					</div>
+					<div class="valid_status error"></div>
 				</div>
-				<div class="valid_status error"></div>
-			</div>
-			<div class="input-box" data-validate="Title">
-				<div class="label">
-					CATEGORY <span class="required">*</span>
+				<div class="input-box" data-validate="Category">
+					<div class="label">
+						CATEGORY <span class="required">*</span>
+					</div>
+					<div class="inputcontainer">
+						<select ng-model="post.category">
+							<option value="">Category</option>
+							<option value="Entertainment">Entertainment</option>
+							<option value="News">News</option>
+							<option value="Sports">Sports</option>
+							<option value="Business">Business</option>
+						</select>
+					</div>
+					<div class="valid_status error"></div>
 				</div>
-				<div class="inputcontainer">
-					<input type="text" ng-model="text.category" autocomplete="new-password">
+				<div class="input-box" data-validate="Post content">
+					<div class="label">
+						POST CONTENT <span class="required">*</span>
+					</div>
+					<div class="inputcontainer">
+						<textarea ng-model="post.content" autocomplete="new-password"></textarea>
+					</div>
+					<div class="valid_status error"></div>
 				</div>
-				<div class="valid_status error"></div>
-			</div>
-			<div class="input-box" data-validate="Title">
-				<div class="label">
-					POST CONTENT <span class="required">*</span>
+				<div style="width: 80%; height: auto; text-align: right; margin: auto;">
+					<div class="status" ng-bind-html="showPostStatus" ng-class="{'showStatus': showPostStatus, 'error': errorPostStatus, 'success': successPostStatus}">
+					</div>
 				</div>
-				<div class="inputcontainer">
-					<textarea ng-model="text.content" autocomplete="new-password"></textarea>
+				<div style="width: 80%; height: 50px; margin: auto; text-align: right; margin-bottom: 30px;">
+					<button type="submit" class="of_btn" style="width: 50%;">
+						<span class="center_item" ng-if="!onSendPost && !editingPost">SUBMIT</span>
+						<span class="center_item" ng-if="!onSendPost && editingPost">UPDATE</span>
+						<div class="loading_dots" ng-if="onSendPost">
+			                <span></span>
+			                <span></span>
+			                <span></span>
+			            </div>
+					</button>
 				</div>
-				<div class="valid_status error"></div>
-			</div>
-			<div style="width: 80%; height: 50px; margin: auto; text-align: right;">
-				<button type="submit" class="of_btn" style="width: 50%;">
-					<span class="center_item" ng-if="!onLogin">SUBMIT</span>
-					<div class="loading_dots" ng-if="onLogin">
-		                <span></span>
-		                <span></span>
-		                <span></span>
-		            </div>
-				</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>

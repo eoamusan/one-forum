@@ -148,7 +148,7 @@ html, body{
 	min-height: 45px;
 	position: relative;
 }
-.input-box .inputcontainer input{
+.input-box .inputcontainer input, .input-box .inputcontainer select{
 	width: calc(100% - 10px);
 	padding-left: 10px;
 	border: none;
@@ -156,6 +156,9 @@ html, body{
 	background: #F2F2F2;
 	border-radius: 5px;
 	height: 45px;
+}
+.input-box .inputcontainer select{
+	width: 100%;
 }
 .input-box .inputcontainer textarea{
 	resize: none;
@@ -180,6 +183,7 @@ html, body{
 	transition: all 0.3s;
 	outline: none;
 	padding: 0;
+	cursor: pointer;
 }
 .of_btn:hover{
 	background: #FFF;
@@ -271,7 +275,7 @@ html, body{
 }
 .of_post{
 	width: calc((100% - 30px) / 4);
-	height: 300px;
+	height: 325px;
 	border-radius: 10px;
 	background: #EEE;
 	float: left;
@@ -318,16 +322,34 @@ html, body{
 .entertainment .comment-icon i{
 	color: #D61A47;
 }
+.sports .preview, .sports .tag-color{
+	background: #D68B1A;
+}
+.sports .comment-icon i{
+	color: #D68B1A;
+}
+.news .preview, .news .tag-color{
+	background: #00897b;
+}
+.news .comment-icon i{
+	color: #00897b;
+}
+.business .preview, .business .tag-color{
+	background: #F27C21;
+}
+.business .comment-icon i{
+	color: #F27C21;
+}
 .post_meta{
-	height: 20px;
+	height: 55px;
 	width: calc(100% - 30px);
 	margin: auto;
-	margin-bottom: 25px;
 }
 .post_meta .tag-color{
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 	float: left;
 }
@@ -335,6 +357,7 @@ html, body{
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 	float: left;
 	position: relative;
@@ -343,6 +366,7 @@ html, body{
 	width: auto;
 	height: 18px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	display: inline-block;
 	font-size: 0.75rem;
 	color: #888;
@@ -359,9 +383,9 @@ html, body{
 .post_readmore button{
 	width: 100px;
 	height: 30px;
-	background: transparent;
-	border: 1px solid #305EBE;
-	color: #305EBE;
+	background: #AAA;
+	border: 1px solid #AAA;
+	color: #FFF;
 	border-radius: 5px;
 	font-size: 0.7rem;
 	transition: all 0.3s;
@@ -369,9 +393,46 @@ html, body{
 	outline: none;
 }
 .post_readmore button:hover{
-	background: #305EBE;
-	color: #FFF;
+	background: transparent;
+	color: #AAA !important;
 }
+.post_readmore button.entertainment{
+	background: transparent;
+	border: 1px solid #D61A47;
+	color: #D61A47;
+}
+.post_readmore button.entertainment:hover{
+	background: #D61A47;
+	color: #FFF !important;
+}
+.post_readmore button.sports{
+	background: transparent;
+	border: 1px solid #D68B1A;
+	color: #D68B1A;
+}
+.post_readmore button.sports:hover{
+	background: #D68B1A;
+	color: #FFF !important;
+}
+.post_readmore button.news{
+	background: transparent;
+	border: 1px solid #00897b;
+	color: #00897b;
+}
+.post_readmore button.news:hover{
+	background: #00897b;
+	color: #FFF !important;
+}
+.post_readmore button.business{
+	background: transparent;
+	border: 1px solid #F27C21;
+	color: #F27C21;
+}
+.post_readmore button.business:hover{
+	background: #F27C21;
+	color: #FFF !important;
+}
+
 .of_closebtn{
 	width: 50px;
 	height: 50px;

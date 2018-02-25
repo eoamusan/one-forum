@@ -10,34 +10,6 @@ app.controller('accountCtrl', function($rootScope, $scope, $http, $state, $inter
         $state.go('signup');
     }
 
-    function validate(){
-        var valids = angular.element(document.querySelectorAll('[data-validate]'));
-
-        var validation = 0;
-
-        angular.forEach(valids, function(valid){
-
-            angular.element(valid.querySelector('div.valid_status')).removeClass('showValidStatus');
-
-            if(angular.element(valid).find('input').val() == ""){
-                angular.element(valid.querySelector('div.valid_status')).html(valid.attributes['data-validate'].value+" is required");
-                angular.element(valid.querySelector('div.valid_status')).addClass('showValidStatus');
-
-                validation++;
-            }else if(valid.attributes['data-validate'].value == "Confirm Password"){
-                if($scope.user.password != $scope.user.confirmpassword){
-                    angular.element(valid.querySelector('div.valid_status')).html("Please confirm password correctly");
-                    angular.element(valid.querySelector('div.valid_status')).addClass('showValidStatus');
-
-                    validation++;
-                }
-            }
-
-        });
-
-        return validation;
-    }
-
     $scope.loginUser = function(){
 
         console.log("Logging in");
@@ -47,7 +19,7 @@ app.controller('accountCtrl', function($rootScope, $scope, $http, $state, $inter
         $scope.successLoginStatus = false;
         $scope.errorLoginStatus = false;
 
-        if(validate() == 0){
+        if($scope.validate("loginUser") == 0){
 
             // Login process
             AuthenticationService.Login($scope.user, function(data){
@@ -100,7 +72,7 @@ app.controller('accountCtrl', function($rootScope, $scope, $http, $state, $inter
         $scope.errorSignupStatus = false;
 
         // Signup process
-        if(validate() == 0){
+        if($scope.validate("signupUser") == 0){
 
             var signup_request = $http({
                 method: "post",
