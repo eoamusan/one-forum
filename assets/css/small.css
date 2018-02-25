@@ -1,0 +1,506 @@
+.action-button{
+	width: 275px;
+	height: 55px;
+	background: #FFF;
+	border: 2px solid #e53544;
+	border-radius: 6px;
+	color: #e53544;
+	float: none !important;
+	cursor: pointer;
+	position: relative;
+	font-weight: 500;
+	transition: all 0.5s;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.action-button:first-of-type{
+	margin-right: 0px !important;
+}
+.formDetails{
+	width: 100%;
+	background-color: rgba(195, 50, 60, 0.9);
+	position: fixed;
+}
+.preLogo, .subscription_wording, .subscription_form_content{
+	padding-left: 25px;
+	width: calc(100% - 50px);
+}
+.call-alternative{
+	width: 40%;
+    height: auto;
+    text-align: center;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 51px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.media{
+	width: 270px !important;
+	height: 270px !important;
+	border: 8px solid #EEE !important;
+}
+.media.center_item_vertically{
+	position: relative !important;
+	width: 270px !important;
+    height: 270px !important;
+    border: 8px solid #EEE !important;
+    top: 0;
+    transform: none;
+}
+.patientlist{
+	display: none;
+}
+.patientcall{
+	width: 100% !important;
+}
+
+.head_info{
+	margin-bottom: 65px;
+}
+
+.head_section .top_copy {
+    font-size: 2.2rem;
+    padding: 0 15%;
+    width: 70%;
+    line-height: 37px;
+    height: auto;
+}
+
+.head_section .sub_copy {
+    width: 80%;
+    height: auto;
+    font-size: 1.3rem;
+}
+
+.delimeter {
+    height: 30px;
+}
+
+.freequestion {
+    margin-top: 10px;
+}
+
+.actionarea {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.doctorboxes{
+	width: 100%;
+}
+
+.links {
+    display: none;
+}
+
+.strongreasons {
+    min-height: 580px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.strongreasons .reasons {
+    width: 90%;
+    height: auto;
+}
+
+.strongreasons .reason .copy {
+    height: auto;
+    padding-top: 2px;
+}
+
+.strongreasons .reason {
+    width: calc(100% - 40px);
+    min-height: 110px;
+    height: auto;
+}
+
+.howitworks .copy {
+    width: 80%;
+    height: auto;
+    float: right;
+    padding: 0 10%;
+    margin-bottom: 160px;
+}
+
+.howitworks .demo {
+    width: 100%;
+    float: right;
+}
+
+.howitworks {
+    height: auto;
+}
+
+.howitworks .demo .container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.howitworks .demo .container .appgif img {
+    margin-left: 35px;
+}
+
+.testimonials {
+    width: 100%;
+    height: auto;
+	padding-bottom: 20px;
+}
+
+.testimonials .copy{
+    padding: 0 10%;
+    padding-top: 109px;
+    float: none;
+    width: 80%;
+}
+
+.testimonial_author {
+    width: 52px;
+    height: 52px;
+}
+
+.testimonial_author_container {
+    width: 65px;
+    height: 65px;
+}
+
+#slideWeb{
+	display: none;
+}
+
+#slideMobile{
+	display: block;
+}
+
+.aboutus .image{
+	width: 100%;
+	height: 250px;
+	float: none;
+}
+
+.aboutus .copy{
+	width: 100%;
+	height: auto;
+	float: none;
+}
+
+.aboutus .copy .top_copy{
+	width: calc(100% - 80px);
+	padding-left: 40px;
+}
+
+.aboutus .copy .details{
+	width: calc(100% - 80px);
+	padding-left: 40px;
+}
+
+.aboutus {
+    height: auto;
+}
+
+.newsletter{
+	height: auto;
+	padding-bottom: 30px;
+}
+
+.newsletter .sub_copy {
+    width: calc(100% - 90px);
+    padding-left: 45px;
+}
+
+.newsletter .inputarea .input {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+}
+
+.newsletter .inputarea{
+	width: 80%;
+	margin-bottom: 15px;
+	height: auto;
+}
+
+.newsletter .inputarea .input input {
+    width: calc(100% - 19px);
+}
+
+.newsletter .inputarea .subscribebutton {
+    width: 100%;
+    float: none;
+}
+
+.footer{
+	height: auto;
+}
+
+.footer .bottomcontainer{
+	height: auto;
+}
+
+.footer .top{
+	height: auto;
+}
+
+.footer .links{
+	display: block !important;
+	float: none;
+	width: 100%;
+	padding-top: 0;
+	float: none !important;
+}
+
+.footer .links .link{
+	float: left;
+	width: calc(50% - 10px);
+}
+
+.footer .calltoaction{
+	background: transparent !important; 
+    border-radius: 5px; 
+    border: none; 
+    color: #FFF !important;
+    width: calc(50% - 10px) !important;
+    height: calc(100% - 10px) !important;
+    color: #FFF !important !important;
+}
+
+.footer .copyright{
+	width: 100%;
+	padding-right: 0;
+}
+
+.footer .socialicons{
+	float: none;
+}
+
+.logo{
+	width: auto;
+}
+
+.ham{
+	display: block;
+}
+
+.flyOut{
+	width: 80%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    z-index: 999;
+    background: #FFF;
+    left: -80%;
+    transition: 0.2s all;
+}
+
+.openFlyout{
+	left: 0 !important;
+}
+
+.mainContainer{
+	position: absolute;
+}
+
+.mainContainer.openFlyout{
+    left: 80%;
+}
+
+.dashboardMain.openFlyout{
+	left: 80% !important;
+}
+
+.login_container{
+	width: 85%;
+}
+
+.login_container .container {
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+
+.signup_container.wide{
+	width: 85% !important;
+}
+
+.form_container .left{
+	width: 100%;
+	margin-right: 0;
+}
+
+.form_container .right{
+	width: 100%;
+	margin-left: 0;
+}
+
+.ourblogs .blog {
+    width: 100%;
+}
+
+.dashboardSide{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: -80%;
+    z-index: 999;
+}
+
+.dashboardMain{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.container_head .welcome .message{
+    display: none;
+}
+
+.landing .top_copy{
+    margin-top: 40px;
+}
+
+.landing .sub_copy{
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    padding-bottom: 30px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.landing{
+    height: auto;
+}
+
+.heart-line{
+    width: 50px;
+    height: 40px;
+    float: left;
+    background: url(../images/heart.png);
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+}
+
+.heart-waves{
+    width: calc(100% - 100px);
+    height: 40px;
+    float: left;
+    background: url(../images/heart2.png);
+    background-size: contain;
+}
+
+.logounit{
+    display: block;
+}
+
+.doctorContainer{
+    width: 100%;
+}
+
+.noDoctorLabel{
+    max-width: calc(100% - 50px);
+    text-align: left;
+}
+
+.doctorName{
+    width: calc(100% - 100px);
+    padding-left: 20px;
+}
+.question_list_container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+.question_thread_list{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    transition: all 0.3s;
+}
+.question_list_container.show{
+    left: -100%;
+}
+.question_thread_list.show{
+    left: 0;
+}
+
+.question_thread_list .top{
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+.question_thread_list .top .top_copy{
+    height: auto;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+.question_thread_list .top .sub_copy{
+    display: none;
+}
+.questionrefresh{
+    padding-top: 5px;
+}
+.question_thread_list .top .questionviewall{
+    display: block;
+}
+.doctor_container .info{
+    width: 85%;
+}
+.doctor_container .top_copy{
+    padding-left: 30px;
+}
+
+
+
+.doctor_container .info {
+    height: auto;
+    margin-top: 80px;
+    position: relative;
+}
+
+.doctor_container .info .pic {
+    float: none; 
+    margin-top: 0;
+    position: absolute;
+    margin-left: 0;
+    top: -55px;
+    left: 50% !important;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+}
+
+.doctor_container .info .other {
+    float: none; 
+    padding-top: 55px;
+    margin: auto;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.doctor_container .info .other .specialty{
+    height: auto;
+}
+
+.add-button .button-container {
+    width: calc(85% - 16px);
+}
+
+.doctor-info-container{
+    width: 85%;
+}
+.doctor-info-container .data{
+    width: 100%;
+    padding-right: 0;
+}
+.doctor-info-container .data.profile-section{
+    width: 100%;
+    padding-right: 0;
+}
+.doctor-info-container .contact{
+    width: 100%;
+}

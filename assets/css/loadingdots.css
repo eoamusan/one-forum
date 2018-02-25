@@ -1,0 +1,155 @@
+.loading_dots{
+    font-size: 1em;
+    line-height: 1;
+    margin: auto;
+    height: calc(100% - 13px);
+    width: 100%;
+    padding: 0;
+    padding-top: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.loading_dots span{
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 7px;
+    width:  7px;
+    -webkit-animation:  loading_dots 0.8s linear infinite;
+    -moz-animation:     loading_dots 0.8s linear infinite;
+    -ms-animation:      loading_dots 0.8s linear infinite;
+    animation:          loading_dots 0.8s linear infinite;
+}
+
+.loading_dots.page-loading span{
+    height: 11px;
+    width:  11px;
+    margin-right: 10px;
+    color: #305EBE;
+    -webkit-animation:  loading_dots_red 0.8s linear infinite;
+    -moz-animation:     loading_dots_red 0.8s linear infinite;
+    -ms-animation:      loading_dots_red 0.8s linear infinite;
+    animation:          loading_dots_red 0.8s linear infinite;
+}
+
+#page-loading .loading_dots span:last-of-type{
+    margin-right: 0px;
+}
+
+.loading_dots span:nth-child(2){
+    -webkit-animation-delay:  0.2s;
+    -moz-animation-delay:     0.2s;
+    -ms-animation-delay:      0.2s;
+    animation-delay:          0.2s;
+}
+
+.loading_dots span:nth-child(1){
+    -webkit-animation-delay:  0.4s;
+    -moz-animation-delay:     0.4s;
+    -ms-animation-delay:      0.4s;
+    animation-delay:          0.4s;
+}
+
+/*
+Define the animation for every efing vendor prefix
+*/
+@-webkit-keyframes loading_dots{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-moz-keyframes loading_dots{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-ms-keyframes loading_dots{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@keyframes loading_dots{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+/*
+Define the animation for every efing vendor prefix
+*/
+@-webkit-keyframes loading_dots_red{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-moz-keyframes loading_dots_red{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-ms-keyframes loading_dots_red{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #FFF;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@keyframes loading_dots_red{
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #305EBE;
+    }
+    100% {
+        background: transparent;
+    }
+}

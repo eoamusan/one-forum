@@ -1,0 +1,72 @@
+.dd_checkbox {
+  width: 100%;
+  margin-bottom: 9px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.dd_check_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.dd_check_slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .dd_check_slider {
+  background-color: #ed3237;
+}
+
+input:focus + .dd_check_slider {
+  box-shadow: 0 0 1px #ed3237;
+}
+
+input:checked + .dd_check_slider:before {
+  -webkit-transform: translateX(29px);
+  -ms-transform: translateX(29px);
+  transform: translateX(29px);
+}
+
+/* Rounded sliders */
+.dd_check_slider.round {
+  border-radius: 34px;
+}
+
+.dd_check_slider.round:before {
+  border-radius: 50%;
+}
+.switch span{
+	width: auto;
+    position: absolute;
+    white-space: nowrap;
+    padding-left: 77px;
+    padding-top: 3px;
+    font-size: 1rem;
+    font-weight: normal;
+}

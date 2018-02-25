@@ -1,0 +1,52 @@
+<div style="width: calc(100% - 15px); height: 50px; background: #305EBE; border-radius: 8px; margin-bottom: 10px; padding-left: 15px; color: #FFF; font-weight: bold; position: relative;">
+	<span class="center_item_vertically">Not one of us?</span>
+</div>
+<div style="width: calc(100% - 2px); height: calc(100% - 62px); background: #FFF; border: 1px solid #EEE; border-radius: 8px;" data-simplebar>
+	<form ng-submit="signupUser();">
+		<div style="width: 80%; height: 40px; padding-top: 25px; margin: auto; color: #305EBE; font-weight: bold; font-size: 1.3rem;">
+			SIGN UP
+		</div>
+		<div class="input-box" data-validate="Name">
+			<div class="label">
+				NAME <span class="required">*</span>
+			</div>
+			<div class="inputcontainer">
+				<input type="text" ng-model="userSignup.name">
+			</div>
+			<div class="valid_status error"></div>
+		</div>
+		<div class="input-box" data-validate="Email">
+			<div class="label">
+				EMAIL ADDRESS <span class="required">*</span>
+			</div>
+			<div class="inputcontainer">
+				<input type="text" ng-model="userSignup.email">
+			</div>
+			<div class="valid_status error"></div>
+		</div>
+		<div class="input-box" data-validate="Password">
+			<div class="label">
+				PASSWORD <span class="required">*</span>
+			</div>
+			<div class="inputcontainer">
+				<input type="password" ng-model="userSignup.password">
+			</div>
+			<div class="valid_status error"></div>
+		</div>
+		<div class="input-box">
+			<button type="submit" class="of_btn" ng-disabled="user.carinsurance == 'no'">
+				<span class="center_item" ng-if="!onSignup">SIGN UP</span>
+				<div class="loading_dots" ng-if="onSignup">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	            </div>
+			</button>
+		</div>
+	</form>
+	<div class="status" ng-bind-html="showSignupStatus" ng-class="{'showStatus': showSignupStatus, 'error': errorSignupStatus, 'success': successSignupStatus}">
+	</div>
+	<div class="input-box align-center" style="font-size: 0.85rem;">
+		One of US? <span class="emphasis" ng-click="login();">LOGIN</span>
+	</div>
+</div>
