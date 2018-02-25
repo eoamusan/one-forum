@@ -19,3 +19,52 @@
 <div style="width: 100%; height: calc(100vh - 50px);" ui-view="container">
 	
 </div>
+<div style="width: 100%; height: calc(100vh - 50px); position: absolute; top: 50px; background: rgba(255, 255, 255, 0.7);">
+	<div class="relative-container" style="padding-top: 50px; height: calc(100% - 50px);">
+		<div class="of_closebtn">
+			<i class="pe-7s-close center_item"></i>
+		</div>
+		<div class="of_create">
+			<div class="create_label">
+				Create a post
+			</div>
+			<div class="input-box" data-validate="Title">
+				<div class="label">
+					TITLE <span class="required">*</span>
+				</div>
+				<div class="inputcontainer">
+					<input type="text" ng-model="text.title" autocomplete="new-password">
+				</div>
+				<div class="valid_status error"></div>
+			</div>
+			<div class="input-box" data-validate="Title">
+				<div class="label">
+					CATEGORY <span class="required">*</span>
+				</div>
+				<div class="inputcontainer">
+					<input type="text" ng-model="text.category" autocomplete="new-password">
+				</div>
+				<div class="valid_status error"></div>
+			</div>
+			<div class="input-box" data-validate="Title">
+				<div class="label">
+					POST CONTENT <span class="required">*</span>
+				</div>
+				<div class="inputcontainer">
+					<textarea ng-model="text.content" autocomplete="new-password"></textarea>
+				</div>
+				<div class="valid_status error"></div>
+			</div>
+			<div style="width: 80%; height: 50px; margin: auto; text-align: right;">
+				<button type="submit" class="of_btn" style="width: 50%;">
+					<span class="center_item" ng-if="!onLogin">SUBMIT</span>
+					<div class="loading_dots" ng-if="onLogin">
+		                <span></span>
+		                <span></span>
+		                <span></span>
+		            </div>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
