@@ -1,6 +1,5 @@
 <div style="width: 100%; height: 100%;" data-simplebar>
 	<div style="width: 80%; height: auto; margin: auto;">
-		<!-- {{post}} -->
 		<div ng-class="post.category | lowercase" class="box" style="width: 40px; height: 40px; margin-top: 50px; margin-right: 20px; border-radius: 5px; float: left; margin-bottom: 20px;">
 			
 		</div>
@@ -23,7 +22,7 @@
 			<i class="fa fa-comments center_item" style="font-size: 1.3rem;"></i>
 		</div>
 		<div style="width: 150px; height: 40px; font-size: 1rem; font-weight: bold; margin-top: 10px; margin-bottom: 20px; color: #444; float: left; position: relative;">
-			<span class="center_item_vertically">0 comments</span>
+			<span class="center_item_vertically">{{post.comments.length}} comments</span>
 		</div>
 		<div style="width: calc(100% - 100px); min-height: 25px; padding: 50px; background: #EEE; border-radius: 10px; font-size: 1.1rem; float: left; margin-bottom: 30px;">
 			{{post.content}}
@@ -35,14 +34,32 @@
 			<div ng-class="post.category | lowercase" class="color" style="width: 100%; height: 40px; font-size: 1.1rem; position: relative;">
 				<span class="center_item_vertically" style="font-weight: 600;">COMMENTS</span>
 			</div>
-			<div style="width: calc(100% - 100px); height: 70px; background: #FFF; border: 1px solid #EEE; border-radius: 10px; margin-bottom: 10px; overflow: hidden;">
-				<textarea ng-model="comment.text" style="width: calc(100% - 40px); height: calc(100% - 40px); width: 100%; border: none; outline: none; padding: 0; resize: none; padding: 20px; font-family: inherit;" placeholder="Type a comment here ..."></textarea>
+			<form ng-submit="addComment();" style="height: 90px;">
+				<div style="width: calc(100% - 170px); height: 70px; background: #FFF; border: 1px solid #EEE; border-radius: 10px; margin-bottom: 10px; overflow: hidden; margin-right: 10px; float: left;">
+					<textarea ng-model="commentAdd.text" style="width: calc(100% - 40px); height: calc(100% - 40px); width: 100%; border: none; outline: none; padding: 0; resize: none; padding: 20px; font-family: inherit;" placeholder="Type a comment here ..."></textarea>
+				</div>
+				<button type="submit" class="addComment">
+					<i class="fa fa-arrow-right center_item"></i>
+				</button>
+			</form>
+			<div ng-repeat="comment in post.comments | reverse" ng-if="post.comments.length > 0">
+				<form ng-submit="editComment(comment.userid);">
+					<div class="commentContainer" ng-if="editingComment">
+						<input type="text" ng-model="comment.text">
+					</div>
+					<div class="commentContainer">
+						{{comment.text}}
+					</div>
+				</form>
+				<div class="commentaction edit" ng-if="globals.currentUser.userdata.data[0].id == comment.userid" ng-click="editComment(comment.userid);">
+					<i class="center_item fa fa-edit"></i>
+				</div>
+				<div class="commentaction delete" ng-if="globals.currentUser.userdata.data[0].id == comment.userid" ng-click="deleteComment(comment.userid);">
+					<i class="center_item fa fa-trash"></i>
+				</div>
 			</div>
-			<div style="width: calc(100% - 100px); min-height: 45px; background: #EEE; border-radius: 10px; margin-bottom: 10px;">
-				
-			</div>
-			<div style="width: calc(100% - 100px); min-height: 45px; background: #EEE; border-radius: 10px; margin-bottom: 10px;">
-				
+			<div style="width: calc(100% - 100px); min-height: 45px; border-radius: 10px; margin-bottom: 10px; font-style: italic; font-size: 1.3rem; padding-top: 10px;" ng-if="post.comments.length == 0">
+				No comments yet
 			</div>
 		</div>
 	</div>

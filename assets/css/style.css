@@ -507,3 +507,75 @@ html, body{
 	color: #305EBE;
 	margin-bottom: 20px;
 }
+.commentaction{
+	width: 43px;
+	height: 43px;
+	background: transparent;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #EEE;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.commentaction:hover{
+	background: #305EBE;
+	border: 1px solid #305EBE;
+}
+.commentaction:hover i{
+	color: #FFF;
+}
+.commentaction.edit{
+	margin-right: 10px;
+}
+.commentaction.delete{
+	margin-right: 0;
+}
+.commentContainer{
+	width: calc(100% - 120px);
+	min-height: 35px;
+	background: #EEE;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-right: 10px;
+	float: left;
+	overflow: hidden;
+}
+.commentContainer.editingComment{
+	width: calc(100% - 122px);
+	min-height: 33px;
+	background: #FFF;
+	border: 1px solid #EEE;
+}
+.commentContainer .input{
+	width: calc(100% - 20px);
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.addComment{
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border: 1px solid #EEE;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+}
+.addComment i{
+	font-size: 1.5rem;
+}
+.addComment:hover{
+	background: #305EBE;
+	border: 1px solid #305EBE;
+}
+.addComment:hover i{
+	color: #FFF;
+}
