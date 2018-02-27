@@ -1,28 +1,28 @@
-<div style="width: 100%; height: 50px; background: #305EBE;">
-	<div style="width: 80%; height: 100%; margin: auto;">
-		<div ng-click="home();" style="width: 200px; height: calc(100% - 10px); float: left; padding-top: 10px;">
+<div class="of_bodyheader">
+	<div class="of_bodyheadercontainer">
+		<div ng-click="home();" class="of_logo">
 			<img src="assets/images/logo.png" height="30">
 		</div>
-		<div style="width: calc(100% - 200px); height: 100%; float: left;">
-			<div style="width: 250px; padding: 0 30px; cursor: pointer; padding-right: 0; height: calc(100% - 10px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 5px;">
-				<div style="width: 100%; height: 40px; border-radius: 40px; background: #FFF; overflow: hidden;">
-					<input type="text" ng-model="content_filter" style="width: calc(100% - 40px); height: 100%; border: none; outline: none; padding: 0 20px;" placeholder="Filter titles">
+		<div class="of_links">
+			<div class="of_linksfilter">
+				<div>
+					<input type="text" ng-model="content_filter" placeholder="Filter titles">
 				</div>
 			</div>
-			<div style="width: auto; padding: 0 30px; cursor: pointer; height: calc(100% - 15px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 15px;" ng-click="logout();">
+			<div class="of_link" ng-click="logout();">
 				LOGOUT
 			</div>
-			<div style="width: auto; padding: 0 30px; cursor: pointer; height: calc(100% - 15px); color: #FFF; float: right; font-size: 0.8rem; padding-top: 15px;" ng-click="createPost();">
+			<div class="of_link" ng-click="createPost();">
 				CREATE POST
 			</div>
 		</div>
 	</div>
 </div>
-<div style="width: 100%; height: calc(100vh - 50px);" ui-view="container">
+<div class="of_body" ui-view="container">
 	
 </div>
-<div ng-show="creatingPost" style="width: 100%; height: calc(100vh - 50px); position: absolute; top: 50px; background: rgba(255, 255, 255, 0.7);">
-	<div class="relative-container" style="padding-top: 50px; height: calc(100% - 50px);">
+<div ng-show="creatingPost" class="of_createcontainer">
+	<div class="relative-container">
 		<div class="of_closebtn" ng-click="closeCreatePost();">
 			<i class="pe-7s-close center_item"></i>
 		</div>
@@ -64,12 +64,12 @@
 					</div>
 					<div class="valid_status error"></div>
 				</div>
-				<div style="width: 80%; height: auto; text-align: right; margin: auto;">
+				<div class="of_status">
 					<div class="status" ng-bind-html="showPostStatus" ng-class="{'showStatus': showPostStatus, 'error': errorPostStatus, 'success': successPostStatus}">
 					</div>
 				</div>
-				<div style="width: 80%; height: 50px; margin: auto; text-align: right; margin-bottom: 30px;">
-					<button type="submit" class="of_btn" style="width: 50%;">
+				<div class="of_bodysubmit">
+					<button type="submit" class="of_btn of_half">
 						<span class="center_item" ng-if="!onSendPost && !editingPost">SUBMIT</span>
 						<span class="center_item" ng-if="!onSendPost && editingPost">UPDATE</span>
 						<div class="loading_dots" ng-if="onSendPost">

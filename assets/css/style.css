@@ -58,6 +58,9 @@ html, body{
 	font-weight: bold;
 	cursor: pointer;
 }
+.bold{
+	font-weight: 600;
+}
 .nomargin{
 	margin: 0 !important;
 }
@@ -118,6 +121,12 @@ html, body{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+}
+.of_loadingicon{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	margin-top: 20px;
 }
 .input-box{
 	width: 80%;
@@ -474,7 +483,7 @@ html, body{
 	height: 50px;
 	position: absolute;
 	right: 50px;
-	top: 50px;
+	top: 0;
 	border: 1px solid #BBB;
 	cursor: pointer;
 	transition: all 0.3s;
@@ -578,4 +587,353 @@ html, body{
 }
 .addComment:hover i{
 	color: #FFF;
+}
+.tagcontainer{
+	width: 80%;
+	height: 50px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.tagcontainer .icon{
+	width: 30px;
+	height: 50px;
+	float: left;
+	position: relative;
+	margin-right: 20px;
+	color: #666;
+	font-size: 2rem;
+}
+.of_postcontainer{
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+.of_postauthor{
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-bottom: 10px;
+}
+.authoricon{
+	font-size: 1.3rem;
+}
+.of_delete{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	float: left;
+	cursor: pointer;
+}
+.of_delete i{
+	width: 30px;
+	height: 25px;
+	position: relative;
+	float: left;
+	text-align: left;
+	padding-top: 5px;
+	font-size: 1.3rem;
+	color: #666;
+}
+.of_accountcontainer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-image: url(../images/bg2.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.of_accountbody{
+	width: 50%;
+	height: 80%;
+}
+.of_accountaesthetics{
+	width: calc((100% - 10px) / 2);
+	height: 100%;
+	float: left;
+	margin-right: 10px;
+	border-radius: 8px;
+	overflow: hidden;
+	background-image: url(../images/hands1.png);
+	background-size: cover;
+	background-position: center;
+}
+.of_accountform{
+	width: calc((100% - 10px) / 2);
+	height: 100%;
+	float: left;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.of_bodyheader{
+	width: 100%;
+	height: 50px;
+	background: #305EBE;
+}
+.of_bodyheadercontainer{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+}
+.of_logo{
+	width: 200px;
+	height: calc(100% - 10px);
+	float: left;
+	padding-top: 10px;
+}
+.of_links{
+	width: calc(100% - 200px);
+	height: 100%;
+	float: left;
+}
+.of_linksfilter{
+	width: 250px;
+	padding: 0 30px;
+	cursor: pointer;
+	padding-right: 0;
+	height: calc(100% - 10px);
+	color: #FFF;
+	float: right;
+	font-size: 0.8rem;
+	padding-top: 5px;
+}
+.of_linksfilter div{
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	background: #FFF;
+	overflow: hidden;
+}
+.of_linksfilter div input{
+	width: calc(100% - 40px);
+	height: 100%;
+	border: none;
+	outline: none;
+	padding: 0 20px;
+}
+.of_link{
+	width: auto;
+	padding: 0 30px;
+	cursor: pointer;
+	height: calc(100% - 15px);
+	color: #FFF;
+	float: right;
+	font-size: 0.8rem;
+	padding-top: 15px;
+}
+.of_body{
+	width: 100%;
+	height: calc(100vh - 50px);
+}
+.of_createcontainer{
+	width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 50px;
+}
+.of_status{
+	width: 80%;
+	height: auto;
+	text-align: right;
+	margin: auto;
+}
+.of_bodysubmit{
+	width: 80%;
+	height: 50px;
+	margin: auto;
+	text-align: right;
+	margin-bottom: 30px;
+}
+.of_half{
+	width: 50%;
+}
+.post .box{
+	width: 40px;
+	height: 40px;
+	margin-top: 50px;
+	margin-right: 20px;
+	border-radius: 5px;
+	float: left;
+	margin-bottom: 20px;
+}
+.post .title{
+	width: calc(100% - 60px);
+	height: 40px;
+	font-size: 1.7rem;
+	font-weight: bold;
+	padding-top: 50px;
+	margin-bottom: 20px;
+	color: #444;
+}
+.post .openbox{
+	width: 38px;
+	height: 38px;
+	margin-top: 10px;
+	margin-right: 20px;
+	border-radius: 5px;
+	float: left;
+	margin-bottom: 20px;
+	position: relative;
+}
+.post .openbox.comments{
+	width: 38px;
+	height: 38px;
+	border-radius: 40px;
+	font-size: 1.1rem;
+	float: left;
+	position: relative;
+	margin-right: 20px;
+	margin-top: 0;
+}
+.post .openbox i{
+	font-size: 1.3rem;
+}
+.post .label{
+	width: auto;
+	height: 32px;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #444;
+	float: left;
+	position: relative;
+	padding-right: 50px;
+	padding-top: 8px;
+}
+.of_nodata{
+	width: calc(100% - 100px);
+	min-height: 45px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	font-style: italic;
+	font-size: 1.3rem;
+	padding-top: 10px;
+}
+.of_postview{
+	width: calc(100% - 100px);
+	min-height: 25px;
+	padding: 50px;
+	background: #EEE;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	float: left;
+	margin-bottom: 30px;
+}
+.of_commentsection{
+	width: calc(100% - 60px);
+	height: auto;
+	float: left;
+}
+.of_commentsection .color{
+	width: 100%;
+	height: 40px;
+	font-size: 1.1rem;
+	position: relative;
+}
+.of_commentform{
+	height: 90px;
+}
+.of_commentinput{
+	width: calc(100% - 170px);
+	height: 70px;
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	margin-right: 10px;
+	float: left;
+}
+.of_commentinput textarea{
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 0;
+	resize: none;
+	padding: 20px;
+	font-family: inherit;
+}
+.of_oneofus{
+	width: calc(100% - 15px);
+	height: 50px;
+	background: #305EBE;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	color: #FFF;
+	font-weight: bold;
+	position: relative;
+}
+.of_authcontainer{
+	width: calc(100% - 2px);
+	height: calc(100% - 62px);
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-radius: 8px;
+}
+.of_authtitle{
+	width: 80%;
+	height: 40px;
+	padding-top: 25px;
+	margin: auto;
+	color: #305EBE;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.of_authalt{
+	font-size: 0.85rem;
+}
+.of_accountlogout{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-image: url(../images/people_hands.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.of_logoutcontainer{
+	background-image: url(../images/bg2.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.of_logoutcontainer > .center_item{
+	width: 35%;
+	height: 70%;
+	float: left;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #FFF;
+}
+.of_logoutcontainer .check{
+	width: 100%;
+	padding-top: 80px;
+	height: 100px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.of_logoutcontainer .message{
+	width: calc(100% - 100px);
+	height: 100px;
+	text-align: center;
+	padding: 0 50px;
+	font-size: 1.3rem;
+	color: #305EBE;
+}
+.of_logoutalt{
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }

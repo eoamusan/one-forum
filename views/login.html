@@ -1,9 +1,9 @@
-<div style="width: calc(100% - 15px); height: 50px; background: #305EBE; border-radius: 8px; margin-bottom: 10px; padding-left: 15px; color: #FFF; font-weight: bold; position: relative;">
+<div class="of_oneofus">
 	<span class="center_item_vertically">One of us?</span>
 </div>
-<div style="width: calc(100% - 2px); height: calc(100% - 62px); background: #FFF; border: 1px solid #EEE; border-radius: 8px;" data-simplebar>
+<div class="of_authcontainer" data-simplebar>
 	<form id="loginUser" ng-submit="loginUser();">
-		<div style="width: 80%; height: 40px; padding-top: 25px; margin: auto; color: #305EBE; font-weight: bold; font-size: 1.3rem;">
+		<div class="of_authtitle">
 			LOGIN
 		</div>
 		<div class="input-box" data-validate="Email address">
@@ -37,7 +37,7 @@
 		<div class="status" ng-bind-html="showLoginStatus" ng-class="{'showStatus': showLoginStatus, 'error': errorLoginStatus, 'success': successLoginStatus}">
 		</div>
 	</form>
-	<div class="input-box align-center" style="font-size: 0.85rem;">
+	<div class="input-box align-center of_authalt">
 		Not one of US? <span class="emphasis" ng-click="signup();">SIGN UP</span>
 	</div>
 </div>
